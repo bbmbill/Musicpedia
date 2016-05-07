@@ -1,0 +1,24 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "oracle database project",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "oracleDB",
+    "Course",
+    "Project"
+  ],
+  "author": "yunze",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "oracledb": "^1.8.0"
+  }
+}

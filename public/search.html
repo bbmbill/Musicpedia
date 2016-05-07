@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Musicpedia</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/responsiveslides.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/responsiveslides.min.js"></script>
+
+		  <script>
+			    $(function () {
+			      $("#slider1").responsiveSlides({
+			        maxwidth: 1600,
+			        speed: 600
+			      });
+			});
+		  </script>
+	</head>
+	<body>
+		<div class="wrap">
+	
+				<div class="clear"> </div>
+			<div class="sub-header">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo1.png" title="logo" /></a>
+				</div>
+				<div class="sub-header-center">
+					<form name="search" method="get" action="/search">
+						<input type="text" name="find">
+						&nbsp;
+						<font size="4" color="white">  BY  </FONT>
+						&nbsp;
+						<Select name="field">
+							<Option VALUE="title">Song Name</option>
+							<Option VALUE="artist_name">Artist Name</option>
+							<Option VALUE="genreName">Genre</option>
+							<Option VALUE="release">Album</option>
+							<Option VALUE="tagName">Tags</option>
+						</Select>
+						&nbsp;&nbsp;
+						<input type="submit" name="search" value="Search" />
+					</form>
+				</div>
+				<div class="sub-header-right">
+				<form action="advanced.html"><input type="submit" value="Advanced Search"/></form>
+				</div>
+			</div>
+			<div class="clear"> </div>
+			<div class="top-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="artists.html">Artists</a></li>
+					<li><a href="genres.html">Genres</a></li>
+					<li><a href="tags.html">Tags</a></li>
+					<li><a href="trending.html">Trending newbies</a></li>
+					<li><a href="top10artists.html">Top Artists</a></li>
+					<li><a href="top10songs.html">Top Tracks</a></li>
+					<li><a href="top10genre.html">Top Genres</a></li>
+					<li><a href="latesttrack.html">Latest Tracks</a></li>
+					<li><a href="famehall.html">Hall of Fame</a></li>
+					<div class="clear"> </div>
+				</ul>
+			</div>
+			</div>
+			
+			</div>
+				<div class="content">
+					<div class="Cartires">
+						<h5><span>Search </span> Result</h5>
+						<p id="demo"></p>
+						<script>
+    					var xmlHttp = new XMLHttpRequest();
+    					xmlHttp.open( "GET", "/getSearchResult", false ); // false for synchronous request
+    					xmlHttp.send( null );
+    					document.getElementById("demo").innerHTML = xmlHttp.responseText;
+						</script>
+					</div>
+				</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="footer">
+				<div class="wrap">
+				<br/>
+				<br/>
+				<a class="button1" href="stats.html">STATISTICAL DATA</a>
+				<center><p>Design by <a href="#">Yunze Li, Xiaohan Wang, Spandita Gujrati, Prakrati LNU</a></p></center>
+				<br/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
